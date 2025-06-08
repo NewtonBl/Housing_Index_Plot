@@ -67,10 +67,11 @@ def Together_SA():
     ax.plot(State_df["period"], State_df["index_sa"], marker="x", markersize=3, markeredgecolor="black", color="green")
     ax.set_xticks(US_df["period"][::4])  # Show every 4th tick
     ax.set_xticklabels(US_df["period"][::4], rotation=90)
-    ax.set_xlabel("Period")
+    ax.set_xlabel("Period (Year and Quarter)")
     ax.set_ylabel("House Price Index")
     ax.legend(["US", "Michigan"])
     ax.grid(axis='x', linestyle='--')
+    plt.figtext(0.5, 0.5, "Quarterly seasonally adjusted home sale price index from FHFA.gov", wrap=True, horizontalalignment='center', fontsize=12)
     plt.show()
 
 
